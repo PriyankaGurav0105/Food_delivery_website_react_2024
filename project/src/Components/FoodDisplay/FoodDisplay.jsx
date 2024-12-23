@@ -1,3 +1,6 @@
+/* eslint-disable no-constant-binary-expression */
+/* eslint-disable no-cond-assign */
+/* eslint-disable no-constant-condition */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react'
@@ -13,7 +16,10 @@ const {food_list}=useContext(StoreContext)
         <h2>Top dishes near you</h2>
         <div className="food-display-list">
             {food_list.map((item,index)=>{
-                return <FoodItem key={index} id={item.id} name={item.name} description={item.description} price={item.price} image={item.image} />
+                if(category==="All" || category===item.category){
+
+                    return <FoodItem key={index} id={item.id} name={item.name} description={item.description} price={item.price} image={item.image} />
+                }
 
                 
             })}
