@@ -1,6 +1,4 @@
-/* eslint-disable no-constant-binary-expression */
-/* eslint-disable no-cond-assign */
-/* eslint-disable no-constant-condition */
+
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react'
