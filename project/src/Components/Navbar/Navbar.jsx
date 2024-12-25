@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React,{useState} from 'react'
 import './Navbar.css';
 import { assets } from '../../assets/frontend_assets/assets';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({setShowLogin}) {
 
     const [menu, setMenu] = useState("home");
 
@@ -25,7 +26,7 @@ function Navbar() {
         <div className="dot"></div>
             
         </div>
-        <button>Sign In</button>
+        <button onClick={()=>setShowLogin(true)}>Sign In</button>
       </div>
     </div>
   )
